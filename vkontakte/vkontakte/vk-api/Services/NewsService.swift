@@ -85,6 +85,7 @@ struct NewsResponse: Decodable {
     }
 }
 //
+//
 //    class GetNews{
 //
 //    func loadData()
