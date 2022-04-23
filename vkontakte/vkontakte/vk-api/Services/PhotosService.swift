@@ -48,24 +48,21 @@ class GetPhoto{
         
         
         let configuration = URLSessionConfiguration.default
-  
         let session =  URLSession(configuration: configuration)
         
    
-        var url = URLComponents()
-        url.scheme = "https"
-        url.host = "api.vk.com"
-        url.path = "/method/photos.getAll"
-        url.queryItems = [
+        var urlConstructor = URLComponents()
+        urlConstructor.scheme = "https"
+        urlConstructor.host = "api.vk.com"
+        urlConstructor.path = "/method/photos.getAll"
+        urlConstructor.queryItems = [
             URLQueryItem(name: "owner_id", value: ownerID),
             URLQueryItem(name: "access_token", value: Session.instance.token),
-            URLQueryItem(name: "v", value: "5.122")
+            URLQueryItem(name: "v", value: "5.131")
         ]
               
       
-        let task = session.dataTask(with: url.url!) { (data, response, error) in
-            
-            
+        let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
             
             guard let data = data else { return }
             
@@ -74,11 +71,11 @@ class GetPhoto{
                 var photosFriend: [Photos] = []
                 var ownerID = ""
                 
-                guard arrayPhotosFriend.response.count != 0 else { return } // проверка на наличие фоток
+                guard arrayPhotosFriend.response.count != 0 else { return } 
                     
-                for i in 0...arrayPhotosFriend.response.items.count-1 {
-                    if let urlPhoto = arrayPhotosFriend.response.items[i].sizes.last?.url {
-                        ownerID = String(arrayPhotosFriend.response.items[i].ownerID)
+                for index in 0...arrayPhotosFriend.response.items.count-1 {
+                    if let urlPhoto = arrayPhotosFriend.response.items[index].sizes.last?.url {
+                        ownerID = String(arrayPhotosFriend.response.items[index].ownerID)
                         photosFriend.append(Photos.init(photo: urlPhoto, ownerID: ownerID))
                     }
                 }

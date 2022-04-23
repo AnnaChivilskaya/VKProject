@@ -35,6 +35,7 @@ class PhotosViewController: UICollectionViewController {
     
     var ownerID = ""
     var collectionPhotos: [Photos] = []
+    lazy var photoService = PhotoService(container: self.collectionView)
     
     
     class PhotosUICollectionView: UICollectionViewCell {
@@ -52,6 +53,8 @@ class PhotosViewController: UICollectionViewController {
             let photo = ImageResource(downloadURL: imgUrl)
             cell.photosFriendImage.kf.setImage(with: photo)
             
+            let imgUrl = collectionPhotos[indexPath.row].photo
+            cell.photosFriendImage.image = photoService.photo(at: indexPath, url: imgUrl)
           
         }
         
