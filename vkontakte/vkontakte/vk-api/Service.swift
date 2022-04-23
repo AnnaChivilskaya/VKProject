@@ -60,19 +60,19 @@ final class VKService {
     
     func loadData(_ method: Method, complition: @escaping () -> Void ) {
                 
-        var url = URLComponents()
-        url.scheme = "https"
-        url.host = "api.vk.com"
-        url.path = method.path
+        var urlConstructor = URLComponents()
+        urlConstructor.scheme = "https"
+        urlConstructor.host = "api.vk.com"
+        urlConstructor.path = method.path
         
         let basicQueryItems = [
             URLQueryItem(name: "access_token", value: Session.instance.token),
-            URLQueryItem(name: "v", value: "5.111")
+            URLQueryItem(name: "v", value: "5.131")
         ]
         let additionalQueryItems = method.parameters.map{ URLQueryItem(name: $0, value: $1) }
-        url.queryItems = basicQueryItems + additionalQueryItems
+        urlConstructor.queryItems = basicQueryItems + additionalQueryItems
         
-        guard let url = url.url else {
+        guard let url = urlConstructor.url else {
             complition()
             return
         }

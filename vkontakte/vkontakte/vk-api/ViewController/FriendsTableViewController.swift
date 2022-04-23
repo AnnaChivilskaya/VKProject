@@ -19,8 +19,9 @@ class FriendsTableViewController: UITableViewController, UISearchBarDelegate {
         
        subscribeToNotificationRealm()
         
-       GetFriends().loadData()
+//       GetFriends().loadData()
         
+        FriendsPromiseKit().getData()
         searchBar.delegate = self
     }
     
@@ -40,9 +41,6 @@ class FriendsTableViewController: UITableViewController, UISearchBarDelegate {
     var namesListFixed: [String] = []
     var namesListModifed: [String] = []
     var letersOfNames: [String] = []
-    
-    
-    // MARK: - TableView
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return letersOfNames.count
@@ -104,6 +102,14 @@ class FriendsTableViewController: UITableViewController, UISearchBarDelegate {
         
         
         return cell
+    }
+    
+    //Избавление смешивания цветов меняем при  нажатии
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let cell = tableView.cellForRow(at: indexPath) as!  FriendsUITableViewCell
+        cell.nameFriendLabel.backgroundColor = cell.backgroundColor
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     private func subscribeToNotificationRealm() {
@@ -191,10 +197,6 @@ class FriendsTableViewController: UITableViewController, UISearchBarDelegate {
         tableView.reloadData()
         searchBar.resignFirstResponder()
     }
-    
-    
-    // MARK: - Segue
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showPhoto"{

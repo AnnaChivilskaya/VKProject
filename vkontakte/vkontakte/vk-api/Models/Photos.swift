@@ -18,7 +18,7 @@ class Photos: Object {
         self.ownerID = ownerID
     }
     
-    required init() {
+    required override init() {
         super.init()
     }
 }
