@@ -15,8 +15,10 @@ class GroupsTableViewController: UITableViewController {
         super.viewDidLoad()
                 
         subscribeToNotificationRealm()
+        
+        GroupsOperations().getData()
 
-        GetGroups().loadData()
+//        GetGroups().loadData()
     }
     
     var realm: Realm = {
@@ -32,6 +34,7 @@ class GroupsTableViewController: UITableViewController {
     var notificationToken: NotificationToken?
     
     var myGroups: [Groups] = []
+    lazy var photoService = PhotoService(container: self.tableView)
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myGroups.count
@@ -52,7 +55,9 @@ class GroupsTableViewController: UITableViewController {
             let avatar = ImageResource(downloadURL: imgUrl)
             cell.avatarGroupView.avatarImage.kf.indicatorType = .activity
             cell.avatarGroupView.avatarImage.kf.setImage(with: avatar)
-            
+
+            let imgUrl = myGroups[indexPath.row].groupLogo
+            cell.avatarGroupView.avatarImage.image = photoService.photo(at: indexPath, url:  imgUrl)
     
         }
         
@@ -71,6 +76,14 @@ class GroupsTableViewController: UITableViewController {
             }
             
         }
+    }
+    
+    //Избавление смешивания цветов меняем при  нажатии
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let cell = tableView.cellForRow(at: indexPath) as! GroupsUITableViewCell
+        cell.nameGroupLabel.backgroundColor = cell.backgroundColor
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     private func subscribeToNotificationRealm() {
