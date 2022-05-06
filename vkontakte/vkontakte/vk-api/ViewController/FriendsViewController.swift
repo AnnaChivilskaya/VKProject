@@ -25,8 +25,6 @@ class FriendsViewController: UIViewController {
     var allPhotos:[Photos] = []
     var countCurentPhoto = 0
     
-    
-    // MARK: - Animator
     var interactiveAnimator: UIViewPropertyAnimator!
     
     @objc func onPan(_ recognizer: UIPanGestureRecognizer) {

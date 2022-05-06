@@ -17,8 +17,7 @@ class NewGroupTableViewController: UITableViewController, UISearchResultsUpdatin
 
     var searchController:UISearchController!
     var GroupsView: [Groups] = []
-    
-    // MARK: - Functions
+    lazy var photoService = PhotoService(container: self.tableView)
     
     func setupSearchBar() {
         searchController = UISearchController(searchResultsController: nil)
@@ -52,8 +51,7 @@ class NewGroupTableViewController: UITableViewController, UISearchResultsUpdatin
         }
     }
     
-    
-    // MARK: - Table view data source
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return GroupsView.count
     }
@@ -72,13 +70,19 @@ class NewGroupTableViewController: UITableViewController, UISearchResultsUpdatin
         
         if let imgUrl = URL(string: GroupsView[indexPath.row].groupLogo) {
             cell.avatarNewGroupView.avatarImage.load(url: imgUrl)
+        
+        let imgUrl = GroupsView[indexPath.row].groupLogo
+        cell.avatarNewGroupView.avatarImage.image = photoService.photo(at: indexPath, url: imgUrl)
         }
 
         return cell
     }
     
+    //Избавление смешивания цветов меняем при  нажатии
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
+        
+        let cell = tableView.cellForRow(at: indexPath) as! NewGroupUITableViewCell
+        cell.nameNewGroupLabel.backgroundColor = cell.backgroundColor
         tableView.deselectRow(at: indexPath, animated: true)
     }
 

@@ -53,30 +53,30 @@ class GetFriends {
         let session =  URLSession(configuration: configuration)
         
 
-        var url = URLComponents()
-        url.scheme = "https"
-        url.host = "api.vk.com"
-        url.path = "/method/friends.get"
-        url.queryItems = [
+        var urlConstructor = URLComponents()
+        urlConstructor.scheme = "https"
+        urlConstructor.host = "api.vk.com"
+        urlConstructor.path = "/method/friends.get"
+        urlConstructor.queryItems = [
             URLQueryItem(name: "user_id", value: String(Session.instance.userId)),
             URLQueryItem(name: "fields", value: "photo_50"),
             URLQueryItem(name: "access_token", value: Session.instance.token),
-            URLQueryItem(name: "v", value: "5.111")
+            URLQueryItem(name: "v", value: "5.131")
         ]
         
-        let task = session.dataTask(with: url.url!) { (data, response, error) in
+        let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
 
             guard let data = data else { return }
             
             do {
                 let arrayFriends = try JSONDecoder().decode(FriendsResponse.self, from: data)
                 var friendList: [Friends] = []
-                for i in 0...arrayFriends.response.items.count-1 {
+                for index in 0...arrayFriends.response.items.count-1 {
 
-                    if arrayFriends.response.items[i].deactivated == nil {
-                        let name = ((arrayFriends.response.items[i].firstName) + " " + (arrayFriends.response.items[i].lastName))
-                        let avatar = arrayFriends.response.items[i].avatar
-                        let id = String(arrayFriends.response.items[i].id)
+                    if arrayFriends.response.items[index].deactivated == nil {
+                        let name = ((arrayFriends.response.items[index].firstName) + " " + (arrayFriends.response.items[index].lastName))
+                        let avatar = arrayFriends.response.items[index].avatar
+                        let id = String(arrayFriends.response.items[index].id)
                         friendList.append(Friends.init(userName: name, userAvatar: avatar, ownerID: id))
                     }
                 }

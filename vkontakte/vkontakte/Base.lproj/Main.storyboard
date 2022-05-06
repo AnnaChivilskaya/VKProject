@@ -22,46 +22,70 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Логин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7h-kB-1f8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7h-kB-1f8">
                                         <rect key="frame" x="186" y="348" width="49" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ms-qD-DO5">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ms-qD-DO5">
                                         <rect key="frame" x="90" y="383" width="235" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9AH-hm-qqb">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9AH-hm-qqb">
                                         <rect key="frame" x="90" y="483" width="235" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leA-Vm-BJH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leA-Vm-BJH">
                                         <rect key="frame" x="186" y="454" width="59" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPq-rQ-I5s">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPq-rQ-I5s">
                                         <rect key="frame" x="175" y="553" width="65" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Войти"/>
                                         <connections>
                                             <action selector="loginPushButton:" destination="Jar-dk-hPK" eventType="touchUpInside" id="Dye-wD-76s"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vk_logo" translatesAutoresizingMaskIntoConstraints="NO" id="qRq-Tn-KKR">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vk_logo" translatesAutoresizingMaskIntoConstraints="NO" id="qRq-Tn-KKR">
                                         <rect key="frame" x="135" y="180" width="145" height="129"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="129" id="NHs-wU-s7t"/>
+                                            <constraint firstAttribute="width" constant="145" id="vrr-7v-m6e"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="qRq-Tn-KKR" firstAttribute="top" secondItem="6il-Gg-VZy" secondAttribute="top" constant="180" id="0Zr-CZ-QAp"/>
+                                    <constraint firstItem="lPq-rQ-I5s" firstAttribute="top" secondItem="9AH-hm-qqb" secondAttribute="bottom" constant="36" id="1C1-hN-k8f"/>
+                                    <constraint firstItem="6ms-qD-DO5" firstAttribute="top" secondItem="P7h-kB-1f8" secondAttribute="bottom" constant="14" id="3w4-fK-jK6"/>
+                                    <constraint firstItem="6il-Gg-VZy" firstAttribute="trailing" secondItem="P7h-kB-1f8" secondAttribute="trailing" constant="179" id="8za-uI-q7d"/>
+                                    <constraint firstItem="6il-Gg-VZy" firstAttribute="trailing" secondItem="leA-Vm-BJH" secondAttribute="trailing" constant="169" id="CEe-6x-ffx"/>
+                                    <constraint firstItem="qRq-Tn-KKR" firstAttribute="leading" secondItem="6il-Gg-VZy" secondAttribute="leading" constant="135" id="H48-75-RCI"/>
+                                    <constraint firstItem="6ms-qD-DO5" firstAttribute="top" secondItem="P7h-kB-1f8" secondAttribute="bottom" constant="14" id="K2S-hO-m9y"/>
+                                    <constraint firstItem="6il-Gg-VZy" firstAttribute="trailing" secondItem="qRq-Tn-KKR" secondAttribute="trailing" constant="134" id="LZo-Fs-zKc"/>
+                                    <constraint firstItem="leA-Vm-BJH" firstAttribute="leading" secondItem="6il-Gg-VZy" secondAttribute="leading" constant="186" id="N5S-iR-mOp"/>
+                                    <constraint firstItem="P7h-kB-1f8" firstAttribute="top" secondItem="qRq-Tn-KKR" secondAttribute="bottom" constant="39" id="O96-ET-0VU"/>
+                                    <constraint firstItem="9AH-hm-qqb" firstAttribute="leading" secondItem="6il-Gg-VZy" secondAttribute="leading" constant="90" id="Rcl-OV-V4c"/>
+                                    <constraint firstItem="leA-Vm-BJH" firstAttribute="top" secondItem="6ms-qD-DO5" secondAttribute="bottom" constant="37" id="RqT-Qd-3uX"/>
+                                    <constraint firstItem="6il-Gg-VZy" firstAttribute="trailing" secondItem="9AH-hm-qqb" secondAttribute="trailing" constant="89" id="ad8-cP-ner"/>
+                                    <constraint firstItem="P7h-kB-1f8" firstAttribute="top" secondItem="qRq-Tn-KKR" secondAttribute="bottom" constant="39" id="agb-y4-tUb"/>
+                                    <constraint firstItem="P7h-kB-1f8" firstAttribute="leading" secondItem="6il-Gg-VZy" secondAttribute="leading" constant="186" id="cvt-nB-Pqn"/>
+                                    <constraint firstItem="6il-Gg-VZy" firstAttribute="trailing" secondItem="6ms-qD-DO5" secondAttribute="trailing" constant="89" id="jTa-Vq-wMx"/>
+                                    <constraint firstItem="leA-Vm-BJH" firstAttribute="top" secondItem="6ms-qD-DO5" secondAttribute="bottom" constant="37" id="lVW-tx-g9B"/>
+                                    <constraint firstItem="lPq-rQ-I5s" firstAttribute="leading" secondItem="6il-Gg-VZy" secondAttribute="leading" constant="175" id="oWC-M6-OK3"/>
+                                    <constraint firstItem="6ms-qD-DO5" firstAttribute="leading" secondItem="6il-Gg-VZy" secondAttribute="leading" constant="90" id="qK5-Xw-pOJ"/>
+                                    <constraint firstItem="9AH-hm-qqb" firstAttribute="top" secondItem="leA-Vm-BJH" secondAttribute="bottom" constant="8" symbolic="YES" id="sIa-a8-wuA"/>
+                                    <constraint firstItem="6il-Gg-VZy" firstAttribute="bottom" secondItem="lPq-rQ-I5s" secondAttribute="bottom" constant="312" id="sQb-7K-g8x"/>
+                                    <constraint firstItem="lPq-rQ-I5s" firstAttribute="top" secondItem="9AH-hm-qqb" secondAttribute="bottom" constant="36" id="t6J-8X-TG7"/>
+                                    <constraint firstItem="9AH-hm-qqb" firstAttribute="top" secondItem="leA-Vm-BJH" secondAttribute="bottom" constant="8" symbolic="YES" id="wBI-Bm-VMj"/>
+                                    <constraint firstItem="6il-Gg-VZy" firstAttribute="trailing" secondItem="lPq-rQ-I5s" secondAttribute="trailing" constant="174" id="wwO-WN-edL"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="P4d-bt-Sxy"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="6il-Gg-VZy"/>
                             </scrollView>
@@ -156,6 +180,217 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2HN-s6-j04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4499" y="-252"/>
+        </scene>
+        <!--News Table View Controller-->
+        <scene sceneID="bNy-Op-bVC">
+            <objects>
+                <tableViewController id="GHJ-kQ-X3K" customClass="NewsTableViewController" customModule="vkontakte" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="4vz-Oj-ZkO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="442" id="1PK-l9-5bL" customClass="NewsTableViewCell" customModule="vkontakte" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="442"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1PK-l9-5bL" id="hSO-BK-sQo">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="442"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="ubU-G9-bzm" customClass="Avatars" customModule="vkontakte" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="11" width="73" height="74"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="linkColor"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDZ-fh-fSK">
+                                            <rect key="frame" x="101" y="17" width="98" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="time post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXf-37-lgN">
+                                            <rect key="frame" x="101" y="46" width="61" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fX3-ZE-DNo">
+                                            <rect key="frame" x="20" y="104" width="32" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wkk-uT-VRv">
+                                            <rect key="frame" x="20" y="158" width="374" height="216"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" id="9ep-Vm-1Ld">
+                                            <rect key="frame" x="0.0" y="397.5" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OGV-h3-ds8" customClass="LikeAction" customModule="vkontakte" customModuleProvider="target">
+                                                    <rect key="frame" x="14" y="0.0" width="68" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="colorNoLike">
+                                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="colorYesLike">
+                                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucf-8u-1qW">
+                                                    <rect key="frame" x="72" y="3" width="117" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="message" catalog="system" title="Comments"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8Y-3r-swA">
+                                                    <rect key="frame" x="180" y="3" width="99" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.right" catalog="system" title="Reposts"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDt-8L-dv6">
+                                                    <rect key="frame" x="315" y="3" width="91" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system" title="Views"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy0-AA-NlZ">
+                                            <rect key="frame" x="0.0" y="133" width="154" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Показать больше..."/>
+                                            <connections>
+                                                <action selector="showMore:" destination="1PK-l9-5bL" eventType="touchUpInside" id="6mP-Qi-UFX"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarsGroup" destination="ubU-G9-bzm" id="BF5-oT-a7g"/>
+                                    <outlet property="countComments" destination="ucf-8u-1qW" id="vc8-jI-9DF"/>
+                                    <outlet property="countLikes" destination="OGV-h3-ds8" id="qUW-cP-TQk"/>
+                                    <outlet property="countReposts" destination="a8Y-3r-swA" id="rD7-GN-kFh"/>
+                                    <outlet property="countViews" destination="xDt-8L-dv6" id="zOO-kV-2Bv"/>
+                                    <outlet property="dateGroup" destination="WXf-37-lgN" id="nlT-fN-7cA"/>
+                                    <outlet property="imageGroup" destination="wkk-uT-VRv" id="oQs-Nd-lqT"/>
+                                    <outlet property="nameGroup" destination="LDZ-fh-fSK" id="H7w-sC-g8B"/>
+                                    <outlet property="showMore" destination="fy0-AA-NlZ" id="aW9-YB-zQd"/>
+                                    <outlet property="textGroup" destination="fX3-ZE-DNo" id="0WA-hw-KKA"/>
+                                    <outlet property="timeGroup" destination="WXf-37-lgN" id="uuv-NK-J4I"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="442" id="1uQ-W6-eFo" customClass="NewsTableViewCell" customModule="vkontakte" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="486.5" width="414" height="442"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1uQ-W6-eFo" id="NTQ-0v-ydo">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="442"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="zog-iH-vb9" customClass="Avatars" customModule="vkontakte" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="11" width="73" height="74"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="linkColor"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ak9-wy-Cq6">
+                                            <rect key="frame" x="101" y="17" width="98" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="time post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foM-cW-Ybr">
+                                            <rect key="frame" x="101" y="46" width="61" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33g-3F-wUB">
+                                            <rect key="frame" x="20" y="104" width="32" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rnc-bq-wId">
+                                            <rect key="frame" x="20" y="158" width="374" height="216"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" id="vgT-zl-ePF">
+                                            <rect key="frame" x="0.0" y="397.5" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vLJ-DI-FEK" customClass="LikeAction" customModule="vkontakte" customModuleProvider="target">
+                                                    <rect key="frame" x="14" y="0.0" width="68" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="colorNoLike">
+                                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="colorYesLike">
+                                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgY-D3-b1i">
+                                                    <rect key="frame" x="72" y="3" width="117" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="message" catalog="system" title="Comments"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptK-yi-2Xi">
+                                                    <rect key="frame" x="180" y="3" width="99" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.right" catalog="system" title="Reposts"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9T-Um-Lho">
+                                                    <rect key="frame" x="315" y="3" width="91" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system" title="Views"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarsGroup" destination="zog-iH-vb9" id="oR0-zZ-W8E"/>
+                                    <outlet property="countComments" destination="VgY-D3-b1i" id="hVz-FH-Q5k"/>
+                                    <outlet property="countLikes" destination="vLJ-DI-FEK" id="yFZ-or-aKm"/>
+                                    <outlet property="countReposts" destination="ptK-yi-2Xi" id="8iR-u2-TSQ"/>
+                                    <outlet property="countViews" destination="F9T-Um-Lho" id="KIt-KQ-foO"/>
+                                    <outlet property="dateGroup" destination="foM-cW-Ybr" id="jWT-Uu-5Dx"/>
+                                    <outlet property="imageGroup" destination="rnc-bq-wId" id="ee5-DT-EWB"/>
+                                    <outlet property="nameGroup" destination="Ak9-wy-Cq6" id="3I6-nb-XKs"/>
+                                    <outlet property="textGroup" destination="33g-3F-wUB" id="WdZ-xl-NSh"/>
+                                    <outlet property="timeGroup" destination="foM-cW-Ybr" id="cTr-vd-x8r"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GHJ-kQ-X3K" id="tkJ-pO-PIm"/>
+                            <outlet property="delegate" destination="GHJ-kQ-X3K" id="EfU-ni-nUU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="wiF-7j-lyS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aC2-Vc-c7R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3750.7246376811595" y="480.80357142857139"/>
         </scene>
         <!--Мои друзья-->
         <scene sceneID="Jci-V6-cyf">
@@ -392,7 +627,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="erc-7h-HLh">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="erc-7h-HLh">
                                 <rect key="frame" x="6" y="249" width="403" height="345"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -413,24 +648,24 @@
         <scene sceneID="6PW-4T-7yc">
             <objects>
                 <navigationController id="Ew9-r6-lH3" customClass="NavigationController" customModule="vkontakte" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News" id="bOO-sS-qfo"/>
+                    <tabBarItem key="tabBarItem" title="News" selectedImage="news" id="bOO-sS-qfo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="t0o-TF-Ib9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="njJ-1K-Wct" kind="show" identifier="showNews" id="y32-hv-ys4"/>
+                        <segue destination="GHJ-kQ-X3K" kind="relationship" relationship="rootViewController" id="ulr-gt-Pi3"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5W-Ii-gyb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3751" y="-252"/>
         </scene>
-        <!--Photo-->
+        <!--Photos-->
         <scene sceneID="9E2-3Q-yMK">
             <objects>
                 <navigationController id="8fV-qL-yC8" customClass="NavigationController" customModule="vkontakte" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Photo" id="pLy-9e-UOr"/>
+                    <tabBarItem key="tabBarItem" title="Photos" selectedImage="photos" id="pLy-9e-UOr"/>
                     <navigationItem key="navigationItem" id="YNl-we-O4c"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jBZ-A4-JEh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -440,70 +675,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njR-Ix-aHm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3000" y="-252"/>
-        </scene>
-        <!--News View Controller-->
-        <scene sceneID="VgH-7a-GiQ">
-            <objects>
-                <viewController id="njJ-1K-Wct" customClass="NewsViewController" customModule="vkontakte" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="k19-4t-J86">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="krb-NH-BxH">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Top" rowHeight="62" id="nuv-7C-YE5" customClass="topnews" customModule="vkontakte" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="62"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nuv-7C-YE5" id="Z0r-Bw-dSD">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Text" rowHeight="63" id="CYJ-tM-wLA" customClass="textnews" customModule="vkontakte" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="106.5" width="414" height="63"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CYJ-tM-wLA" id="VME-qi-PQ2">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Image" rowHeight="70" id="rpa-N5-Cm7">
-                                        <rect key="frame" x="0.0" y="169.5" width="414" height="70"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rpa-N5-Cm7" id="aDG-Y6-poD" customClass="imagenews" customModule="vkontakte" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Bottom" rowHeight="83" id="3Ce-bq-6CO" customClass="bottomnews" customModule="vkontakte" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="239.5" width="414" height="83"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Ce-bq-6CO" id="8ag-Es-OG0">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="njJ-1K-Wct" id="64d-Dk-1ya"/>
-                                    <outlet property="delegate" destination="njJ-1K-Wct" id="0ow-dl-GmD"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="KId-BT-bv9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="XgI-Fg-9rS"/>
-                    <connections>
-                        <outlet property="TableView" destination="krb-NH-BxH" id="V1b-IZ-URY"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1P9-Ly-hfY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3750.7246376811595" y="480.80357142857139"/>
         </scene>
         <!--Groups-->
         <scene sceneID="Z7L-qB-WSW">
@@ -524,13 +695,21 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
         <image name="friends" width="32" height="32"/>
         <image name="groups" width="32" height="32"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="news" width="32" height="32"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <image name="photos" width="32" height="32"/>
         <image name="vk_logo" width="400" height="400"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
